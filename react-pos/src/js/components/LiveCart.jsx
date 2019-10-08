@@ -77,8 +77,10 @@ class LiveCart extends Component {
       }
     };
     return (
-      <div>
+      <div className="container">
         <Header />
+        <br />
+        <br />
         <div className="livecart">
           <div className="col-md-5 pull-right">
             <div className="panel panel-primary">

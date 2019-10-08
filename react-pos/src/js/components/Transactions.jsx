@@ -39,12 +39,12 @@ class Transactions extends Component {
     };
 
     return (
-      <div>
+      <div className="container">
         <Header />
         <br />
         <br />
 
-        <table className="table table-hover table-striped">
+        <table className="pos table table-responsive table-striped table-hover">
           <thead>
             <tr>
               <th>Time</th>

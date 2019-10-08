@@ -42,15 +42,13 @@ class Inventory extends Component {
 
     axios
       .post(HOST + `/api/inventory/product`, newProduct)
-      .then(
-        response =>
-          this.setState({ snackMessage: "Product Added Successfully!" }),
-        this.handleSnackbar()
-      )
+      .then(response => {
+        this.setState({ snackMessage: "Product Added Successfully!" });
+        this.handleSnackbar();
+      })
       .catch(err => {
-        console.log(err),
-          this.setState({ snackMessage: "Product failed to save" }),
-          this.handleSnackbar();
+        this.setState({ snackMessage: "Product failed to save" });
+        this.handleSnackbar();
       });
   };
   handleEditProduct = editProduct => {
@@ -63,8 +61,8 @@ class Inventory extends Component {
       })
       .catch(err => {
         console.log(err);
-        this.setState({ snackMessage: "Product Update Failed!" }),
-          this.handleSnackbar();
+        this.setState({ snackMessage: "Product Update Failed!" });
+        this.handleSnackbar();
         return false;
       });
   };
@@ -122,7 +120,7 @@ class Inventory extends Component {
           <br />
           <br />
 
-          <table className="table">
+          <table className="pos table table-responsive table-striped table-hover">
             <thead>
               <tr>
                 <th scope="col">Name</th>
